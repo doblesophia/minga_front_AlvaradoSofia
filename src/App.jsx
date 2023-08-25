@@ -26,11 +26,11 @@ export default function App() {
           <img className='w-8 ml-72' src="../public/assets/images/flechaIzquierda.svg" alt="" />
         </div>
       
-        <div className='mt-8 w-full h-screen bg-cover bg-center lg:h-96 lg:text-left' style={{backgroundImage: "url('./assets/images/FondoNaruto.svg')"}}>
-          <h1 className='text-white font-bold pt-40 md:text-3xl pl-20 lg:text-6xl'>Live the emotion of the manga</h1>
-          <h4 className='text-white text-sm md:text-lg pl-20 lg:text-2xl'>Find the perfect manga for you</h4>
-          <h4 className='text-white text-sm md:text-lg pl-20'>#MingaForever 🔥</h4>
-          <button className='text-white rounded-md bg-pink-400 w-28 mt-4 ml-20'>Sing in!</button>
+        <div className='mt-8 w-full h-screen bg-cover bg-center lg:h-96 lg:text-left justify-center items-center' style={{backgroundImage: "url('./assets/images/FondoNaruto.svg')"}}>
+          <h1 className='text-white font-bold pt-52 lg:pt-24 md:text-3xl lg:pl-20 lg:text-6xl'>Live the emotion of the manga</h1>
+          <h4 className='text-white text-sm md:text-lg lg:pl-20 lg:text-2xl'>Find the perfect manga for you</h4>
+          <h4 className='text-white text-sm md:text-lg lg:pl-20'>#MingaForever 🔥</h4>
+          <button className='text-white rounded-md bg-pink-400 w-28 mt-4 lg:ml-20'>Sing in!</button>
         </div>
     </main>
     

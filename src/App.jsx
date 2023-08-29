@@ -5,6 +5,8 @@ import './App.css'
 // import Navbar from '../src/layouts/Navbar'
 import Index from './pages/Index'
 import Layout from './layouts/Layout'
+import Display from './components/Display'
+
 
 
 
@@ -12,8 +14,7 @@ import Layout from './layouts/Layout'
 export default function App() {
   return (
     <>
-    
-    <Layout prop1="Soy una propiedad" text="soy un texto más coherente">
+    <Layout>
     <Index/>
       </Layout>
     

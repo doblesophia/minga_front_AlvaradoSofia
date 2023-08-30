@@ -10,7 +10,7 @@ const Carrousel = () => {
   let [counter, setCounter] = useState(0)
   let [categories, setCategories]= useState([])
 
-  let prev =()=>{(counter!==0) ? (setCounter(counter-1)) : (setCounter(counter.length-1))
+  let prev =()=>{(counter!==0) ? (setCounter(counter-1)) : (setCounter(categories.length-1))
   
   }
   let next = ()=>{(counter !==categories.length-1) ? (setCounter(counter +1)) : (setCounter(0))
@@ -25,7 +25,7 @@ const Carrousel = () => {
 
   useEffect(()=>{
     getData()
-  }, [])
+  })
   
   return(
     

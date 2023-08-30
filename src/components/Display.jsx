@@ -3,7 +3,7 @@ import React from 'react'
 
 
 const Display = (props) => {
-  console.log(props)
+  
   return (
     <>
       <div className=' absolute top-10 left-0 w-screen lg:w-1/3 h-screen bg-gradient-to-r from-pink-400 to-pink-300 rounded-xl flex flex-col items-center gap-8'>

@@ -1,21 +1,45 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ArrowLeft from './ArrowLeft'
 import ArrowRight from './ArrowRight'
+import axios from 'axios'
+
+
 
 
 const Carrousel = () => {
-  return (
+  let [counter, setCounter] = useState(0)
+  let [categories, setCategories]= useState([])
+
+  let prev =()=>{(counter!==0) ? (setCounter(counter-1)) : (setCounter(categories.length-1))
+  
+  }
+  let next = ()=>{(counter !==categories.length-1) ? (setCounter(counter +1)) : (setCounter(0))
+     
+  }
+
+  function getData(){
+    axios("https://minga-back-vyqy.onrender.com/categories")
+    .then(res=>setCategories(res.data.categories))
+    .catch((err=>console.log(err)))
+  }
+
+  useEffect(()=>{
+    getData()
+  })
+  
+  return(
+    
     <>
      <div className='lg:w-full lg:h-48 lg:mt-8 lg:bg-gradient-to-b from-pink-300 to-pink-400 lg:flex hidden'>
-          <ArrowLeft/>
-          <img className='lg:w-72 lg:h-72 lg:-mt-20' src="../../public/assets/images/NarutoSVG.svg" alt="" />
-          <img className='lg:w-52 lg:h-52 lg:-mt-8 ml-12' src="../../public/assets/images/posternaruto.svg" alt="" />
+          <ArrowLeft fnIzquierda = {prev}/>
+          <img className='lg:w-72 lg:h-72 lg:-mt-20' src={categories[counter]?.character_photo} alt="" />
+          <img className='lg:w-52 lg:h-52 lg:-mt-8 ml-12' src={categories[counter]?.cover_photo} alt="" />
           
           <div className='lg:w-56 text-left ml-28 pt-12 '>
-          <h3 className='text-white text-2xl text-left'>Shonen</h3>
-          <p className='text-white text-xs text-left lg:w-80'>Is the manga that is aimed at adolescent boys. They are series with large amounts of action, in which humorous situations often occur. The camaraderie between members of a collective or a combat team stands out.</p>
+          <h3 className='text-white text-2xl text-left'>{categories[counter]?.name}</h3>
+          <p className='text-white text-xs text-left lg:w-80'>{categories[counter]?.description}</p>
           </div>
-          <ArrowRight/>
+          <ArrowRight fnDerecha = {next}/>
         </div>
     </>
   )

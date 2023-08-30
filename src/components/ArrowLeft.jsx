@@ -1,8 +1,10 @@
 import React from 'react'
+import prev from "./Carrousel"
 
-const ArrowLeft = () => {
+const ArrowLeft = (props) => {
+  
   return (
-    <img className='w-8' src="../../public/assets/images/flechaDerecha.svg" alt="" />
+    <img className='w-8 cursor-pointer' src="../../public/assets/images/flechaDerecha.svg" alt="" onClick={props.fnIzquierda} />
   )
 }
 

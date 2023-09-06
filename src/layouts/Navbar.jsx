@@ -3,12 +3,8 @@ import Display from '../components/Display'
 
 const Navbar = () => {
   
-  
-
   const [open, setOpen] = useState(false)
      
-    
-
   return (
     <>
     
@@ -19,7 +15,6 @@ const Navbar = () => {
     {open ? <Display fnApertura={setOpen}/> : null }
 
     </>
-
 
   )
   }

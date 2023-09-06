@@ -7,7 +7,9 @@ import WelcomeMobile from '../components/WelcomeMobile'
 const Index = () => {
   return (
     <>
+    <div className='lg:w-full lg:h-48 lg:mt-8 lg:bg-gradient-to-b from-pink-300 to-pink-400 lg:flex hidden'>
     <Carrousel/>
+    </div>
     <div className="w-full h-screen bg-cover lg:hidden" style={{backgroundImage: "url('./assets/images/FondoMobile.svg')"}}>
      <WelcomeMobile/>
     </div>

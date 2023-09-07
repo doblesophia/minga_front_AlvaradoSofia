@@ -16,7 +16,7 @@ export default function App() {
     <>
     <Layout>
     <Index/>
-      </Layout>
+    </Layout>
     
   </>
   )

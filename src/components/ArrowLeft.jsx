@@ -1,5 +1,5 @@
 import React from 'react'
-import prev from "./Carrousel"
+
 
 const ArrowLeft = (props) => {
   

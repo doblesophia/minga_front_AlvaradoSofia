@@ -18,6 +18,9 @@ import Author from '../pages/Author.jsx'
                  {
                     path:"/authors/me",
                     element: <Author/>
+                 },
+                 {
+                    
                  }
              ]
         }
